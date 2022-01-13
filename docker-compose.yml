@@ -22,10 +22,10 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     volumes:
-      - ./:/app
+      - ./:/subql-debionetwork
     command:
-      - -f=/app
-      - --local
+      - -f=/subql-debionetwork
+      - --db-schema=subql-debionetwork
 
   graphql-engine:
     image: onfinality/subql-query:latest
@@ -42,6 +42,6 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     command:
-      - --name=app
+      - --name=subql-debionetwork
       - --playground
       - --indexer=http://subquery-node:3000
