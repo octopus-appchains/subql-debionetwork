@@ -1,12 +1,12 @@
 specVersion: 0.2.0
 name: subql-debionetwork
 version: 1.0.0
-description: ''
+description: ""
 repository: https://github.com/octopus-appchains/subql-debionetwork.git
 schema:
   file: ./schema.graphql
 network:
-  genesisHash: '0x996800af345b3109acdada9913e36d1efa98b89e7dcd0b61b70fdbfc13b2fa50'
+  genesisHash: "0x996800af345b3109acdada9913e36d1efa98b89e7dcd0b61b70fdbfc13b2fa50"
   endpoint: >-
     wss://gateway.mainnet.octopus.network/debionetwork/ae48005a0c7ecb4053394559a7f4069e
 dataSources:
@@ -24,3 +24,8 @@ dataSources:
             method: Deposit
         - handler: handleCall
           kind: substrate/CallHandler
+        - handler: systemTokenTransferEvent
+          kind: substrate/EventHandler
+          filter:
+            module: balances
+            method: Transfer
