@@ -9,13 +9,13 @@ runner:
     name: "@subql/query"
     version: "*"
 description: This project can be use as a starting po...
-repository: https://github.com/octopus-appchains/testnet-subql-debionetwork.git
+repository: https://github.com/octopus-appchains/subql-debionetwork.git
 schema:
   file: ./schema.graphql
 network:
   endpoint: >-
-    wss://gateway.testnet.octopus.network/debionetwork/554976cbb180f676f188abe14d63ca24
-  genesisHash: "0xc15da258748903f5341b1cfb0d9f3afa7ed0bfc59be5e1185b6e303277b5237a"
+    wss://gateway.mainnet.octopus.network/debionetwork/ae48005a0c7ecb4053394559a7f4069e
+  genesisHash: "0x996800af345b3109acdada9913e36d1efa98b89e7dcd0b61b70fdbfc13b2fa50"
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
