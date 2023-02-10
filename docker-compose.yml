@@ -58,6 +58,6 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     command:
-      - --name=image.png
+      - --name=subql-debionetwork
       - --playground
       - --indexer=http://subquery-node:3000
